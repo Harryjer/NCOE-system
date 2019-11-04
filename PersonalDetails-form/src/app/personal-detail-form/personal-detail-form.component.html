@@ -1,102 +1,119 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Add-Personal-Details</title>
-
-  
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-
-  
-  <link href="css/sb-admin.css" rel="stylesheet">
-
-</head>
-
-<body class="bg-dark">
-
-  
-      <div class="form-group">Add-Personal-Details</div>
-          <form>
-          <div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="text" id="fullName" class="form-control" placeholder="Full name" required="required" autofocus="autofocus">
-                  <label for="fullName">Full name</label>
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="text" id="InitialName" class="form-control" placeholder="Name with Initials" required="required">
-                  <label for="InitialName">Initialname</label>
-                </div>
-              </div>
-           
-          <div class="col-md-6">
-              <div class="form-label-group">
-              <input type="text" id="permanentAddress" class="form-control" placeholder="Permanent address" required="required">
-              <label for="permanentAddress">permanentAddress</label>
-            </div>
-          </div>
-
-          <div class="col-md-6">
-          <div class="form-group">
-              <input type="tel" id="contactNumber" class="form-control" placeholder="Contact Number" required="required">
-              <label for="contactNumber">Contact Number</label>  
-              </div>
-            </div>
-          <div class="col-md-6">
-          <div class="form-group">
-              <input type="districtOfPermanentAddress" class="form-control" placeholder="districtOfPermanentAddress" required="required">
-              <label for="districtOfPermanentAddress">District of Permanent Address</label>
-          </div>
-          </div>  
-
-          
+<html>
+    
+    <form>
+        <div class="form-group"> <!-- Full Name -->
+          <label for="full_name" class="control-label">Full Name</label>
+          <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name">
+        </div>
+      
+        <div class="form-group"> <!-- Name with initials -->
+          <label for="initial_name" class="control-label">Name with initial</label>
+          <input type="text" class="form-control" id="initial_name" name="initial_name" placeholder="Name with initial">
+        </div>
+      
+        <div class="form-group"> <!-- Permanent Address -->
+          <label for="permanent_address" class="control-label">Permanent Address</label>
+          <input type="text" class="form-control" id="permanent_address" name="permanent_address" placeholder="Permanent Address">
+        </div>
+                    
+        <div class="form-group"> <!-- Contact Number-->
+          <label for="contact_number" class="control-label">Contact Number</label>
+          <input type="tel" class="form-control" id="contact_number" name="contact_number" placeholder="***-*******">
+        </div>
+        
+               
+        <div class="form-group"> <!-- National ID -->
+          <label for="NIC" class="control-label">National ID</label>
+          <input type="varchar" class="form-control" id="NIC" name="NIC" placeholder="**********">
         </div>
 
-    <!--/div>
-        div class="form-group">
-            <div class="form-row">
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="required">
-                  <label for="inputPassword">Password</label>
-                </div>
-              </div>
-              <div class="col-md-6">
-                <div class="form-label-group">
-                  <input type="password" id="confirmPassword" class="form-control" placeholder="Confirm password" required="required">
-                  <label for="confirmPassword">Confirm password</label>
-                </div>
-              </div>
+
+        <label for="gender" class="control-label">Gender</label>
+        <div [ngClass]="setClasses()">
+            <p>
+              <input (change)="male" type="checkbox" />
+              {{ todo.title }}
+              <label for="male" class="control-label">Male</label>
+
+              <input (change) = "female" type="checkbox"/>
+              {{todo.title}}
+              <label for="female" class="control-label">Female</label>
+            </p>
+          </div>   
+
+
+          <label for="ethnicity" class="control-label">Ethnicity</label>
+          <div [ngClass]="setClasses()">
+              <p>
+                <input (change)="sinhala" type="checkbox" />
+                {{ todo.title }}
+                <label for="sinhala" class="control-label">Sinhala</label>
+
+                <input (change) = "slTamil" type="checkbox"/>
+                {{todo.title}}
+                <label for="slTamil" class="control-label">Sri Lankan Tamil</label>
+
+                <input (change) = "indTamil" type="checkbox"/>
+                {{todo.title}}
+                <label for="indTamil" class="control-label">Indian Tamil</label>
+
+                <input (change) ="muslim" type="checkbox"/>
+                {{todo.title}}
+                <label for="muslim" class="control-label">Muslim</label>
+
+              </p>
             </div>
+
+         
+        <label for="NIC" class="control-label">Religion</label>
+        <div [ngClass]="setClasses()">
+            <p>
+              <input (change)="buddhism" type="checkbox" />
+              {{ todo.title }}
+              <label for="buddhism" class="control-label">Buddhism</label>
+              
+              <input (change)="christian" type="checkbox"/>
+              {{ todo.id }}
+              <label for="christian" class="control-label">Christian</label>
+              
+
+              <input (change)="catholic" type="checkbox"/>
+              {{ todo.id }}
+              <label for="catholic" class="control-label">Catholic</label>
+               
+              <input (change)="islam" type="checkbox"/>
+              {{ todo.id }}
+              <label for="islam" class="control-label">Islam</label>
+
+              <input (change) = "hindu" type="checkbox"/>
+              {{ todo.id }}
+              <label for="hindu" class="control-label">Hindu</label>
+              
+                     
+              <label for="{{ todo.id }}">
+                {{ todo.title }}
+              </label>
+             
+            </p>
           </div>
-          <a class="btn btn-primary btn-block" href="login.html">Register</a>
-        </form>
-        <div class="text-center">
-          <a class="d-block small mt-3" href="login.html">Login Page</a>
-          <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+
+          <label for="attempt" class="control-label">Attempts that you like to apply</label>
+          <div [ngClass]="setClasses()">
+              <p>
+                <input (change)="attempt1" type="checkbox" />
+                {{ todo.title }}
+                <label for="attempt1" class="control-label">2016</label>
+
+                <input (change) = "attempt2" type="checkbox"/>
+                {{todo.title}} 
+                <label for="attempt2" class="control-label">2017</label> 
+              </p>
+          </div>      
+
+
+        <div class="form-group"> <!-- Go to results submission -->
+          <button type="submit" class="btn btn-primary">NEXT</button>
         </div>
-      </div>
-    </div>
-  </div>
-
-  Bootstrap core JavaScript-->
-  <!--script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-   Core plugin JavaScript
-<script src ="vendor/jquery-easing/jquery.easing.min.js"></script> -->
-
-</body>
-
+      
+      </form>	
 </html>

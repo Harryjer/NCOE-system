@@ -4,11 +4,13 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonalDetailFormComponent } from './personal-detail-form/personal-detail-form.component';
+import { ResultdetailsComponent } from './resultdetails/resultdetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonalDetailFormComponent
+    PersonalDetailFormComponent,
+    ResultdetailsComponent
   ],
   imports: [
     BrowserModule,

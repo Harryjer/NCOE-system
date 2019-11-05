@@ -1,1 +1,105 @@
-<p>resultdetails works!</p>
+
+<html>
+        <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand">
+                          <img src="C:/Users/DELL/Desktop/NCOE system/nemis sis logo1.PNG" class="logo">
+                        </a>
+                        <span class="navbar-brand">Results Submission</span>
+                    </div>
+                </div>
+            </nav> 
+
+   <form>
+
+        <div> <!-- Academic Year -->
+            <label for="academicyr" class="control-label">1) ACADEMIC YEAR </label>
+            <p>
+         <select name="demo" id="#">
+            <option selected="selected" value="001">2016</option>
+            <option value="002"> 20117 </option>
+
+          </select>
+           </p>
+        </div>  
+        
+        <!-- Stream -->
+        <label for="stream" class="control-label">2) STREAM TAHT YOU FACED FOR A/L EXAMINATION </label>
+        <div [ngClass]="setClasses()">
+            <p>
+              <input (change)="biology" type="checkbox" />
+              {{ todo.title }}
+              <label for="biology" class="control-label">BIOLOGY</label>
+           
+
+              <input (change) = "physical_science" type="checkbox"/>
+              {{todo.title}}
+              <label for="physical_science" class="control-label">PHYSICAL SCIENCE</label>
+            <br>    
+
+              <input (change) = "commerce" type="checkbox"/>
+              {{todo.title}}
+              <label for="commerce" class="control-label">COMMERCE</label>
+
+              <input (change) = "arts" type="checkbox"/>
+              {{todo.title}}
+              <label for="arts" class="control-label">ARTS</label>
+            <br>
+
+              <input (change) = "technology" type="checkbox"/>
+              {{todo.title}}
+              <label for="technology" class="control-label">TECHNOLOGY</label>
+            </p>
+          </div>   
+      
+          <!-- Medium -->
+          <label for="stream" class="control-label">3) MEDIUM </label>
+          <div [ngClass]="setClasses()">
+              <p>
+                <input (change)="sinhala" type="checkbox" />
+                {{ todo.title }}
+                <label for="sinhala" class="control-label">SINHALA</label>
+
+                <input (change)="english" type="checkbox" />
+                {{ todo.title }}
+                <label for="english" class="control-label">ENGLISH</label>
+               
+                <input (change)="tamil" type="checkbox" />
+                {{ todo.title }}
+                <label for="tamil" class="control-label">TAMIL</label>
+              </p>
+          </div>
+          
+          <!-- admission number -->
+          <div class="form-group"> 
+            <label for="admission_number" class="control-label">4) ADMISSION NUMBER</label>
+            <input type="varchar" class="form-control" id="admission_number" name="admission_number" placeholder="**********">
+          </div>
+
+
+        <div> <!-- attempt number -->
+            <label for="academicyr" class="control-label">5) ATTEMPT NUMBER </label>
+            <p>
+        <select name="demo" id="#">
+            <option selected="selected" value="0001">01</option>
+            <option value="0002"> 02 </option>
+            <option value="0003"> 03 </option>
+
+        </select>
+           </p>
+        </div>
+        
+        <!-- z-score -->
+        <div class="form-group"> 
+                <label for="z_score" class="control-label">6) Z-SCORE</label>
+                <input type="number" class="form-control" id="z_score" name="z_score" placeholder="**********">
+        </div>
+
+    
+        <div class="form-group"> <!-- Go to results submission1(O/L) -->
+            <button type="submit1" class="btn btn-primary">Add O/L Results</button>
+          </div>
+
+    </form>
+</html>

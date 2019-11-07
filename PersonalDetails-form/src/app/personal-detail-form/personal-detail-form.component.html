@@ -1,203 +1,236 @@
 <html>
-    
-    <nav class="navbar navbar-default">
+
+<nav class="navbar navbar-default">
 
 
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand">
-                  <img src="C:/Users/DELL/Desktop/NCOE system/nemis sis logo1.PNG" class="logo">
-                </a>
-                <span class="navbar-brand">Personal Details Form</span>
-            </div>
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+        <img src="C:/Users/DELL/Desktop/NCOE system/nemis sis logo1.PNG" class="logo">
+      </a>
+      <span class="navbar-brand">Personal Details Form</span>
+    </div>
+  </div>
+</nav>
+
+
+
+<form class="modal-content justify-content-center align-items-center d-flex">
+
+  <div class="form-group row">
+    <div class="col-6" action="/action_page.php">
+      <!-- Full Name -->
+      <label for="full_name" class="control-label">1) FULL NAME : </label>
+      <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name">
+    </div>
+
+    <div class="col-6">
+      <!-- Name with initials -->
+      <label for="initial_name" class="control-label">2) NAME WITH INITIALS</label>
+      <input type="text" class="form-control" id="initial_name" name="initial_name" placeholder="Name with initial">
+    </div>
+
+    <div class="col-6">
+      <!-- Permanent Address -->
+      <label for="permanent_address" class="control-label">3) PERMANENT ADDRESS</label>
+      <input type="text" class="form-control" id="permanent_address" name="permanent_address"
+        placeholder="Permanent Address">
+    </div>
+
+    <div class="col-6">
+      <!-- Contact Number-->
+      <label for="contact_number" class="control-label">4) CONTACT NUMBER</label>
+      <input type="tel" class="form-control" id="contact_number" name="contact_number" placeholder="***-*******">
+    </div>
+
+
+
+    <div class="col-6">
+      <!-- National ID -->
+      <label for="NIC" class="control-label">5) NATIONAL ID</label>
+      <input type="varchar" class="form-control" id="NIC" name="NIC" placeholder="**********">
+    </div>
+
+
+    <div class="col-6">
+      <!-- Birthday -->
+      <label for="bDay" class="control-label">6) BIRTHDAY</label>
+      <input type="date" class="form-control" id="bDay" name="bDay" placeholder="Birthday">
+    </div>
+
+    <div class="col-6">
+      <!-- District of permanent address -->
+
+      <label for="district" class="control-label">7) DISTRICT OF PERMANENT ADDRESS </label>
+      <p>
+        <select class="browser-default custom-select" name="demo" id="#">
+          <option selected="selected" value="01">Colombo</option>
+          <option value="02"> Gampaha </option>
+          <option value="03"> Kalutara </option>
+          <option value="04"> Kandy </option>
+          <option value="05"> Matale </option>
+          <option value="06"> Nuwara Eliya </option>
+          <option value="07"> Galle </option>
+          <option value="08"> Matara </option>
+          <option value="09"> Hambanthota </option>
+          <option value="10"> Jaffna </option>
+          <option value="11"> Kilinochchiya </option>
+          <option value="12"> Mannar </option>
+          <option value="13"> Vavuniya </option>
+          <option value="14"> Mulativ </option>
+          <option value="15"> Betticolo </option>
+          <option value="16"> Ampara </option>
+          <option value="17"> Trincomalee </option>
+          <option value="18"> Kurunegala </option>
+          <option value="19"> Puttalam </option>
+          <option value="20"> Anuradhapura </option>
+          <option value="21"> Polonnaruwa </option>
+          <option value="22"> Badulla </option>
+          <option value="23"> Moneragala </option>
+          <option value="24"> Rathnapura </option>
+          <option value="25"> Kegalle </option>
+        </select>
+      </p>
+    </div>
+
+    <div class="col-6">
+
+      <label for="gender" class="control-label">8) GENDER</label>
+      <div [ngClass]="setClasses()">
+        <!-- Default inline 1-->
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="defaultInline1" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline1">Male </label>
         </div>
-    </nav>      
 
-
-
-    <form>
-        <div class="form-group"> <!--Full Name -->
-          <label for="full_name" class="control-label">1) FULL NAME</label>
-          <input type="text" class="form-control" id="full_name" name="full_name" placeholder="Full Name">
+        <!-- Default inline 2-->
+        <div class="custom-control custom-radio custom-control-inline">
+          <input type="radio" class="custom-control-input" id="defaultInline2" name="inlineDefaultRadiosExample">
+          <label class="custom-control-label" for="defaultInline2">Female</label>
         </div>
-      
-        <div class="form-group"> <!-- Name with initials -->
-          <label for="initial_name" class="control-label">2) NAME WITH INITIALS</label>
-          <input type="text" class="form-control" id="initial_name" name="initial_name" placeholder="Name with initial">
-        </div>
-      
-        <div class="form-group"> <!-- Permanent Address -->
-          <label for="permanent_address" class="control-label">3) PERMANENT ADDRESS</label>
-          <input type="text" class="form-control" id="permanent_address" name="permanent_address" placeholder="Permanent Address">
-        </div>
-                    
-        <div class="form-group"> <!-- Contact Number-->
-          <label for="contact_number" class="control-label">4) CONTACT NUMBER</label>
-          <input type="tel" class="form-control" id="contact_number" name="contact_number" placeholder="***-*******">
-        </div>
-        
-               
-        <div class="form-group"> <!-- National ID -->
-          <label for="NIC" class="control-label">5) NATIONAL ID</label>
-          <input type="varchar" class="form-control" id="NIC" name="NIC" placeholder="**********">
-        </div>
+      </div>
 
-        
-        <div class="form-group"> <!-- Birthday -->
-          <label for="bDay" class="control-label">6) BIRTHDAY</label>
-          <input type="date" class="form-control" id="bDay" name="bDay" placeholder="Birthday">
-        </div>
-
-              
-                          
-            <div> <!-- District of permanent address -->
-            <label for="district" class="control-label">7) DISTRICT OF PERMANENT ADDRESS </label>
-            <p>
-          <select name="demo" id="#">
-            <option selected="selected" value="01">Colombo</option>
-            <option value="02"> Gampaha </option>
-            <option value="03"> Kalutara </option>
-            <option value="04"> Kandy </option>
-            <option value="05"> Matale </option>
-            <option value="06"> Nuwara Eliya </option>
-            <option value="07"> Galle </option>
-            <option value="08"> Matara </option>
-            <option value="09"> Hambanthota </option>
-            <option value="10"> Jaffna </option>
-            <option value="11"> Kilinochchiya </option>
-            <option value="12"> Mannar </option>
-            <option value="13"> Vavuniya </option>
-            <option value="14"> Mulativ </option>
-            <option value="15"> Betticolo </option>
-            <option value="16"> Ampara </option>
-            <option value="17"> Trincomalee </option>
-            <option value="18"> Kurunegala </option>
-            <option value="19"> Puttalam </option>
-            <option value="20"> Anuradhapura </option>
-            <option value="21"> Polonnaruwa </option>
-            <option value="22"> Badulla </option>
-            <option value="23"> Moneragala </option>
-            <option value="24"> Rathnapura </option>
-            <option value="25"> Kegalle </option>
-            </select>
-            </p>
-          </div> 
+    </div>
 
 
-        <label for="gender" class="control-label">8) GENDER</label>
-        <div [ngClass]="setClasses()">
-            <p>
-              <input (change)="male" type="checkbox" />
-              {{ todo.title }}
-              <label for="male" class="control-label">MALE</label>
+    <div class="col-6">
 
-              <input (change) = "female" type="checkbox"/>
-              {{todo.title}}
-              <label for="female" class="control-label">FEMALE</label>
-            </p>
-          </div>   
+      <label for="ethnicity" class="control-label">9) ETHNICITY</label>
+      <div [ngClass]="setClasses()">
+        <p>
+          <input (change)="sinhala" type="checkbox" />
+          {{ todo.title }}
+          <label for="sinhala" class="control-label">SINHALA</label>
 
+          <input (change)="slTamil" type="checkbox" />
+          {{todo.title}}
+          <label for="slTamil" class="control-label">SRI LANKAN TAMIL</label>
 
-          <label for="ethnicity" class="control-label">9) ETHNICITY</label>
-          <div [ngClass]="setClasses()">
-              <p>
-                <input (change)="sinhala" type="checkbox" />
-                {{ todo.title }}
-                <label for="sinhala" class="control-label">SINHALA</label>
+          <input (change)="indTamil" type="checkbox" />
+          {{todo.title}}
+          <label for="indTamil" class="control-label">INDIAN TAMIL</label>
 
-                <input (change) = "slTamil" type="checkbox"/>
-                {{todo.title}}
-                <label for="slTamil" class="control-label">SRI LANKAN TAMIL</label>
+          <input (change)="muslim" type="checkbox" />
+          {{todo.title}}
+          <label for="muslim" class="control-label">MUSLIM</label>
 
-                <input (change) = "indTamil" type="checkbox"/>
-                {{todo.title}}
-                <label for="indTamil" class="control-label">INDIAN TAMIL</label>
+        </p>
+      </div>
+    </div>
 
-                <input (change) ="muslim" type="checkbox"/>
-                {{todo.title}}
-                <label for="muslim" class="control-label">MUSLIM</label>
+    <div class="col-6">
+      <label for="NIC" class="control-label">10) RELIGION</label>
+      <div [ngClass]="setClasses()">
+        <p>
+          <input (change)="buddhism" type="checkbox" />
+          {{ todo.title }}
+          <label for="buddhism" class="control-label">BUDDHISM</label>
 
-              </p>
-            </div>
-
-         
-        <label for="NIC" class="control-label">10) RELIGION</label>
-        <div [ngClass]="setClasses()">
-            <p>
-              <input (change)="buddhism" type="checkbox" />
-              {{ todo.title }}
-              <label for="buddhism" class="control-label">BUDDHISM</label>
-              
-              <input (change)="christian" type="checkbox"/>
-              {{ todo.id }}
-              <label for="christian" class="control-label">CHRISTIAN</label>
-              
-
-              <input (change)="catholic" type="checkbox"/>
-              {{ todo.id }}
-              <label for="catholic" class="control-label">CATHOLIC</label>
-               
-              <input (change)="islam" type="checkbox"/>
-              {{ todo.id }}
-              <label for="islam" class="control-label">ISLAM</label>
-
-              <input (change) = "hindu" type="checkbox"/>
-              {{ todo.id }}
-              <label for="hindu" class="control-label">HINDU</label>
-              
-                     
-              <label for="{{ todo.id }}">
-                {{ todo.title }}
-              </label>
-             
-            </p>
-          </div>
-
-          <label for="attempt" class="control-label">11) Attempts that you like to apply</label>
-          <div [ngClass]="setClasses()">
-              <p>
-                <input (change)="attempt1" type="checkbox" />
-                {{ todo.title }}
-                <label for="attempt1" class="control-label">2016</label>
-
-                <input (change) = "attempt2" type="checkbox"/>
-                {{todo.title}} 
-                <label for="attempt2" class="control-label">2017</label> 
-              </p>
-          </div>      
- 
-          <label for="sripada" class="control-label">12) Would You Like to Apply for the "SRI PADA" Institute</label>
-          <div [ngClass]="setClasses()">
-              <p>
-                <input (change)="sripada" type="checkbox" />
-                {{ todo.title }}
-                <label for="sripada" class="control-label">YES</label>
-
-                <input (change) = "sripada" type="checkbox"/>
-                {{todo.title}} 
-                <label for="sripada" class="control-label">NO</label> 
-              </p>
-          </div>      
- 
-
-          <label for="STWorker" class="control-label">13) Are You a Child of a State Worker?</label>
-          <div [ngClass]="setClasses()">
-              <p>
-                <input (change)="STWorker" type="checkbox" />
-                {{ todo.title }}
-                <label for="STWorker" class="control-label">YES</label>
-
-                <input (change) = "STWorker" type="checkbox"/>
-                {{todo.title}} 
-                <label for="STWorker" class="control-label">NO</label> 
-              </p>
-          </div>      
- 
+          <input (change)="christian" type="checkbox" />
+          {{ todo.id }}
+          <label for="christian" class="control-label">CHRISTIAN</label>
 
 
-        <div class="form-group"> <!-- Go to results submission -->
-          <button type="submit" class="btn btn-primary">NEXT</button>
-        </div>
-      
-      </form>	
+          <input (change)="catholic" type="checkbox" />
+          {{ todo.id }}
+          <label for="catholic" class="control-label">CATHOLIC</label>
+
+          <input (change)="islam" type="checkbox" />
+          {{ todo.id }}
+          <label for="islam" class="control-label">ISLAM</label>
+
+          <input (change)="hindu" type="checkbox" />
+          {{ todo.id }}
+          <label for="hindu" class="control-label">HINDU</label>
+
+
+          <label for="{{ todo.id }}">
+            {{ todo.title }}
+          </label>
+
+        </p>
+      </div>
+    </div>
+    <div class="col-6">
+      <label for="attempt" class="control-label">11) Attempts that you like to apply</label>
+      <div [ngClass]="setClasses()">
+        <p>
+          <input (change)="attempt1" type="checkbox" />
+          {{ todo.title }}
+          <label for="attempt1" class="control-label">2016</label>
+
+          <input (change)="attempt2" type="checkbox" />
+          {{todo.title}}
+          <label for="attempt2" class="control-label">2017</label>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <label for="sripada" class="control-label">12) Would You Like to Apply for the "SRI PADA" Institute</label>
+      <div [ngClass]="setClasses()">
+        <p>
+          <input (change)="sripada" type="checkbox" />
+          {{ todo.title }}
+          <label for="sripada" class="control-label">YES</label>
+
+          <input (change)="sripada" type="checkbox" />
+          {{todo.title}}
+          <label for="sripada" class="control-label">NO</label>
+        </p>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <label for="STWorker" class="control-label">13) Are You a Child of a State Worker?</label>
+      <div [ngClass]="setClasses()">
+        <p>
+          <input (change)="STWorker" type="checkbox" />
+          {{ todo.title }}
+          <label for="STWorker" class="control-label">YES</label>
+
+          <input (change)="STWorker" type="checkbox" />
+          {{todo.title}}
+          <label for="STWorker" class="control-label">NO</label>
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="form-group">
+    <!-- Go to results submission -->
+    <button type="submit" class="btn btn-primary">NEXT</button>
+  </div>
+
+</form>
+
+<select class="custom-select custom-select-sm">
+  <option selected>Open this select menu</option>
+  <option value="1">One</option>
+  <option value="2">Two</option>
+  <option value="3">Three</option>
+</select>
+
 </html>

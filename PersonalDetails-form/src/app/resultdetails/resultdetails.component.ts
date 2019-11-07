@@ -11,5 +11,5 @@ export class ResultdetailsComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

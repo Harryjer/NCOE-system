@@ -132,4 +132,81 @@
           </div>
 
     </form>
-</html>
+
+
+    
+      <nav class="navbar navbar-default">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <a class="navbar-brand">
+                        <img src="C:/Users/DELL/Desktop/NCOE system/nemis sis logo1.PNG" class="logo">
+                      </a>
+                      <span class="navbar-brand">O/L Results Submission</span>
+                  </div>
+              </div>
+          </nav> 
+
+          <form>
+
+            <div> <!-- Academic Year -->
+                <label for="academicyr" class="control-label">1) ACADEMIC YEAR </label>
+                <p>
+             <select name="demo" id="#">
+                <option selected="selected" value="001">2013</option>
+                <option value="002"> 2014 </option>
+    
+              </select>
+               </p>
+            </div>
+            
+            <!--Medium-->
+            <label for="stream" class="control-label">2) MEDIUM </label>
+              <div [ngClass]="setClasses()">
+              <p>
+                <input (change)="sinhala" type="checkbox" />
+                {{ todo.title }}
+                <label for="sinhala" class="control-label">SINHALA</label>
+
+                <input (change)="english" type="checkbox" />
+                {{ todo.title }}
+                <label for="english" class="control-label">ENGLISH</label>
+               
+                <input (change)="tamil" type="checkbox" />
+                {{ todo.title }}
+                <label for="tamil" class="control-label">TAMIL</label>
+              </p>
+          </div>
+
+
+            <!-- admission number -->
+            <div class="form-group"> 
+                <label for="admission_numberol" class="control-label">4) ADMISSION NUMBER</label>
+                <input type="varchar" class="form-control" id="admission_numberol" name="admission_numberol" placeholder="**********">
+            </div>
+
+            <div> <!-- attempt number -->
+              <label for="academicyr" class="control-label">5) ATTEMPT NUMBER </label>
+          <p>
+            <select name="demo" id="#">
+                ` <option selected="selected" value="0001">01</option>
+                  <option value="0002"> 02 </option>
+                  <option value="0003"> 03 </option>
+
+            </select>
+          </p>
+       </div>
+       <!--exam hall number-->
+      <div class="form-group"> 
+            <label for="hall_number" class="control-label">4) INDEX NUMBER OF THE EXAMINATION HALL</label>
+            <input type="varchar" class="form-control" id="hall_number" name="hall_number" placeholder="**********">
+      </div>
+
+        </form>    
+
+
+
+
+    </html>
+
+
+

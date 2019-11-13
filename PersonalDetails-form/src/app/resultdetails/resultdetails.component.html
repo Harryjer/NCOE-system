@@ -27,6 +27,7 @@
         <!-- Stream -->
         <label for="stream" class="control-label">2) STREAM TAHT YOU FACED FOR A/L EXAMINATION </label>
         <div [ngClass]="setClasses()">
+
             <p>
               <input (change)="biology" type="checkbox" />
               {{ todo.title }}
@@ -78,15 +79,15 @@
           </div>
 
 
-        <div> <!-- attempt number -->
+         <div> <!-- attempt number -->
             <label for="academicyr" class="control-label">5) ATTEMPT NUMBER </label>
             <p>
-        <select name="demo" id="#">
+         <select name="demo" id="#">
             <option selected="selected" value="0001">01</option>
             <option value="0002"> 02 </option>
             <option value="0003"> 03 </option>
 
-        </select>
+          </select>
            </p>
         </div>
         
@@ -132,9 +133,6 @@
           </div>
 
     </form>
-
-
-    
       <nav class="navbar navbar-default">
               <div class="container-fluid">
                   <div class="navbar-header">
@@ -147,7 +145,6 @@
           </nav> 
 
           <form>
-
             <div> <!-- Academic Year -->
                 <label for="academicyr" class="control-label">1) ACADEMIC YEAR </label>
                 <p>
@@ -195,17 +192,43 @@
             </select>
           </p>
        </div>
+
        <!--exam hall number-->
       <div class="form-group"> 
             <label for="hall_number" class="control-label">4) INDEX NUMBER OF THE EXAMINATION HALL</label>
             <input type="varchar" class="form-control" id="hall_number" name="hall_number" placeholder="**********">
-      </div>
-
-        </form>    
+      </div> 
 
 
+      </form> 
 
-
+      <form novalidate role="form" [formGroup]="caseinfo">
+        <div formArrayName="caseRows">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>F1</th>
+                        <th>F2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let caserow of caseinfo.controls.caseRows.controls; let i=index" [formGroupName]="i">
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="caselpn">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" formControlName="casesku">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </form>
+      
     </html>
 
 

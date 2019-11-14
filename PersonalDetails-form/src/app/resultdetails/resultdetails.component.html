@@ -98,38 +98,55 @@
         </div>
 
 
-        <table class="table">
-                <thead>
-                    <tr>
-                        <th>Number</th>
-                        <th>Name</th>
-                        <th>Grade</th>
-                </thead>
-            
-                <tr *ngFor="let data of Table;let i = index" (click)=addToAnotherTable(i)>
-            
-                    <td>
-                        <span>{{data.Number}}</span>
-                    </td>
-                    <td>
-                        <span>{{data.Name}}</span>
-                    </td>
-                    <td>
-                        <span>{{data.Grade}}</span>
-                    </td>
-                    <td>
-                      <select>
-                         <option *ngFor="let mission of data.missions">
-                            {{mission}}
-                         </option>
-                      </select>
-                    </td>
-                </tr>
-            </table>
+        <!--O/L details submission-->
+      <table style="width:100%">
         
+        <tr>
+          <th>SUBJECT NUMBER</th>
+          <th>SUBJECT NAME</th>
+          <th>GRADE</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+      </table>
+
           
             <div class="form-group"> <!-- Go to results submission1(O/L) -->
-            <button type="submit1" class="btn btn-primary">Add O/L Results</button>
+            <button type="submit1" class="btn btn-primary">NEXT</button>
           </div>
 
     </form>
@@ -199,36 +216,133 @@
             <input type="varchar" class="form-control" id="hall_number" name="hall_number" placeholder="**********">
       </div> 
 
+     <!--O/L details submission-->
+      <table style="width:100%">
+        
+        <tr>
+          <th>SUBJECT NUMBER</th>
+          <th>SUBJECT NAME</th>
+          <th>GRADE</th>
+        </tr>
+        
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
 
-      </form> 
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
 
-      <form novalidate role="form" [formGroup]="caseinfo">
-        <div formArrayName="caseRows">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>F1</th>
-                        <th>F2</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let caserow of caseinfo.controls.caseRows.controls; let i=index" [formGroupName]="i">
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" formControlName="caselpn">
-                            </div>
-                        </td>
-                        <td>
-                            <div class="form-group">
-                                <input type="text" class="form-control" formControlName="casesku">
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </form>
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="number" class="form-control" id="sIndex" name="sIndex" placeholder="***"> 
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sName" name="sName" placeholder="Subject Name">
+          </td>
+          <td>
+            <input type="varchar" class="form-control" id="sGrade" name="sGrade" placeholder="Grade">
+          </td>
+        </tr>
+
+      </table>
       
+      <div class="form-group"> <!-- Go to results submission1(O/L) -->
+        <button type="submit1" class="btn btn-primary">SUBMIT</button>
+      </div>
+      
+      
+     
+      </form> 
+           
     </html>
 
 

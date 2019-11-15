@@ -4,16 +4,19 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { Route, Routes, RouterModule } from '@angular/router';
 import { PersonalDetailFormComponent } from './personal-detail-form/personal-detail-form.component';
 import { ResultdetailsComponent } from './resultsdetails/resultdetails.component';
 import { SportDetailsFormComponent } from './sport-details-form/sport-details-form.component';
-import { Route, Routes, RouterModule } from '@angular/router';
+import { SundaySchoolFormComponent } from './sunday-school-form/sunday-school-form.component';
+
 
 
 const routes: Routes = [
 { path: 'personal-detail-form',component: PersonalDetailFormComponent },
-{ path: 'advance_level-form', component: ResultdetailsComponent},
-{ path: 'sport-details-form', component: SportDetailsFormComponent }
+{ path: 'resultsdetails', component: ResultdetailsComponent},
+{ path: 'sport-details-form', component: SportDetailsFormComponent },
+{ path: 'sunday-school-form', component: SundaySchoolFormComponent}
 ]
 
 @NgModule({
@@ -21,7 +24,9 @@ const routes: Routes = [
     AppComponent,
     PersonalDetailFormComponent,
     ResultdetailsComponent,
-    SportDetailsFormComponent
+    SportDetailsFormComponent,
+    SundaySchoolFormComponent,
+    
   ],
   imports: [
     BrowserModule,
